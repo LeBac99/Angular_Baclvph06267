@@ -1,0 +1,9 @@
+
+<h5>Edit Product</h5>
+
+<div *ngIf="product">
+    <form>
+    <input type="text" name="product-name" [(ngModel)]="product.name">
+    <button class="btn btn-info" (click)="saveProduct()">Edit</button>
+</form>
+</div>

@@ -1,0 +1,11 @@
+
+<form>
+        <label>
+            <h1>Add Product </h1></label>
+        <div class="form-group">
+          <label for="exampleInputEmail1" >Name</label>
+          <input type="text" class="form-control" name="product" [(ngModel)]='product.name' id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your name with anyone else.</small>
+        </div>
+        <button type="submit" class="btn btn-primary"(click)="addProduct()">Add</button>
+      </form>

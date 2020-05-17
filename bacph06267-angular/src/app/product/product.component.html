@@ -1,0 +1,54 @@
+<div class="products-area-wrapper sm-top">
+  <div class="container container-wide">
+      <div class="row">
+          <div class="col-lg-5 m-auto text-center">
+              <div class="section-title">
+                  <h2 class="h3">All Of Our Products</h2>
+                  <p>All best seller product are now available for you and your can buy
+                      this product from here any time any where so sop now</p>
+              </div>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-12">
+              <div class="product-wrapper columns-5">
+                
+                  <div class="col" *ngFor="let product of products">
+                      <div class="product-item">
+                          <div class="product-item__thumb">
+                              <a href="single-product.html">
+                                  <img class="thumb-primary" src="{{product.image}}" alt="Product" />
+                                  <img class="thumb-secondary" src="{{product.image}}" alt="Product" />
+                              </a>
+                          </div>
+
+                          <div class="product-item__content">
+                              <div class="ratting">
+                                  <span><i class="ion-android-star"></i></span>
+                                  <span><i class="ion-android-star"></i></span>
+                                  <span><i class="ion-android-star"></i></span>
+                                  <span><i class="ion-android-star-half"></i></span>
+                                  <span><i class="ion-android-star-half"></i></span>
+                              </div>
+                              <h4 class="title"><a href="/detail/{{product.id}}" >{{product.name}}</a></h4>
+                              <span class="price"><strong>Price:</strong>{{product.price}}</span>
+                          </div>
+
+                          <div class="product-item__action">
+                              <button class="btn-add-to-cart"><i class="ion-bag"></i></button>
+                              <button class="btn-add-to-cart"><i class="ion-ios-loop-strong"></i></button>
+                              <button class="btn-add-to-cart"><i class="ion-ios-heart-outline"></i></button>
+                              <button class="btn-add-to-cart"><i class="ion-eye"></i></button>
+                          </div>
+                      </div>
+                  </div>
+             
+                
+                  <!-- End Product Item -->
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

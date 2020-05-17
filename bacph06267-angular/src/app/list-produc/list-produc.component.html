@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title></title>
+
+ 
+</head>
+
+<body>
+
+  <app-header></app-header>
+  
+  
+      <!--== Start Header Area ==-->
+    
+      <!--== End Header Area ==-->
+  
+      <!--== Start Page Header Area ==-->
+   
+      <!--== End Page Header Area ==-->
+  
+      <!--== Start Page Content Wrapper ==-->
+      <div class="page-content-wrapper sp-y">
+          <div class="wishlist-page-content-wrap">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-12">
+                          <div class="shopping-cart-list-area">
+                              <div class="shopping-cart-table table-responsive">
+                                  <a href="#" class="btn btn-brand" style="float: right; color: aliceblue"  routerLink="/product/add">Add</a>
+                                  <br>
+                                  <table class="table table-bordered text-center mb-0">
+                                      <thead>
+                                      
+                                          <tr>
+                                              <th>Products</th>
+                                              <th>Price</th>
+                                            
+                                              <th>Cart</th>
+                                          </tr>
+                                      </thead>
+  
+                                      <tbody>
+                                          <tr *ngFor="let product of products">
+                                              <td class="product-list" >
+                                                  <div class="cart-product-item d-flex align-items-center">
+                                                      <div class="remove-icon">
+                                                          <button><i class="fa fa-trash-o" (click)="deleteProduct(product.id)"></i></button>
+                                                      </div>
+                                                      <a href="single-product.html" class="product-thumb">
+                                                          <img src="{{product.image}}"   alt="Product" />
+                                                      </a>
+                                                      <a href="/detail/{{product.id}}" class="product-name">{{product.name}}</a>
+                                                  </div>
+                                              </td>
+                                              <td>
+                                                  <span class="price">${{product.price}}</span>
+                                              </td>
+                                            
+                                              <td class="add-cart">
+                                                  <a href="#" class="btn btn-brand" routerLink="/product/edit/{{product.id}}">Edit</a>
+                                              </td>
+                                          
+                                          </tr>
+  
+                                        
+  
+                                        
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!--== End Page Content Wrapper ==-->
+  
+      <!--== Start Footer Area Wrapper ==-->
+     <app-footer></app-footer>
+   
+  
+  
+     
+ 
+  
+  </body>
+  
+  </html>
